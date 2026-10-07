@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="hearts"></div>
+
+    <!-- PAGE 1 -->
+    <section class="page active" id="page1">
+
+        <div class="intro">
+            <p class="small-text">✨ A little something for you ✨</p>
+
+            <h1>Hey, Birthday Girl!!! 💗</h1>
+
+            <p>
+                ye meri new recipi hai,birthday wishing ki 😂...
+                
+            </p>
+
+            <button onclick="nextPage(2)">
+                Open Your Surprise 🎁
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page2">😂
+
+        <div class="birthday">
+
+            <p class="small-text">Okay... here it comes 👀</p>
+
+            <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+
+            <h2>My Not so Favorite Human 💕</h2>
+
+            <p>
+                Today is officially your day.
+                <br>
+                So you're allowed to be extra romantic today. 😌😂💅
+                <br>if u are thinking , why is it all pink!?   <br>
+                 Answer is... MERI MARJI!!
+            </p>
+
+            <button onclick="nextPage(3)">
+                Continue 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 3 -->
+    <section class="page" id="page3">
+
+        <div class="letter">
+
+            <div class="envelope">💌</div>
+
+            <h1>A Little Message For You</h1>
+
+            <p id="typingText"></p>
+
+            <button onclick="nextPage(4)">
+                There's More... 👀
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 4 -->
+    <section class="page" id="page4">
+
+        <div class="reasons">
+
+            <h1>Things I Appreciate About You 💗</h1>
+
+            <p>Click the cards 👇</p>
+
+            <div class="cards">
+
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front">
+                        🌸
+                        <br>
+                        Your Personality
+                    </div>
+
+                    <div class="card-back">
+                        You're genuinely one of the people who make things more fun just by being around
+                        and yes YOU DO HAVE humour, i dont wanna admit this... 🫶😒
+                    </div>
+                </div>
+
+
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front">
+                        😂
+                        <br>
+                        Your Chaos
+                    </div>
+
+                    <div class="card-back">
+                        Life would definitely be more boring without your telling me every single!!! restaurant in the city. 😭
+                    </div>
+                </div>
+
+
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front">
+                        🫂
+                        <br>
+                        Our Friendship
+                    </div>
+
+                    <div class="card-back">
+                        I'm really glad life decided to put you in my story naito me kiske hi ghar jaakar khudki marji chalaati.😙 💗
+                    </div>
+                </div>
+
+
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front">
+                        ✨
+                        <br>
+                        YOU
+                    </div>
+
+                    <div class="card-back">
+                       you are officially buddhi now.🌷
+                    </div>
+                </div>
+
+            </div>
+
+            <button onclick="nextPage(5)">
+                One Last Surprise 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 5 -->
+    <section class="page" id="page5">
+
+        <div class="gift-section">
+
+            <h1>There's Something Here... 👀</h1>
+
+            <p>jaldi open kar!!.</p>
+
+            <div class="gift" onclick="openGift()">
+
+                <div class="gift-lid"></div>
+                <div class="gift-box"></div>
+
+            </div>
+
+            <p id="giftText"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 6 -->
+    <section class="page" id="page6">
+
+        <div class="final">
+
+            <div class="sparkle">✨</div>
+
+            <h1>Happy Birthday Mitaalaaa!!! 💗</h1>
+
+            <p>
+                I hope this year brings you<br>
+                countless reasons to laugh and smile,<br>
+                stupid and beautiful memories,<br>
+                and everything you've been wishing for,<br> 
+                and even what you have not been wishing for , eg. me 😌
+            </p>
+
+            <p class="final-message">
+                Stay exactly the way you are. 🌷
+                <br><br>
+                And never forget how not loved but... appreciated you are!!. 🫶😂
+            </p>
+
+            <h2>Have the best birthday ever Labbiii! 🎂</h2>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

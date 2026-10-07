@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #ffe6f2,
+        #f8e7ff,
+        #e8e9ff
+    );
+
+    color: #5a4054;
+}
+
+
+/* ---------------- PAGES ---------------- */
+
+.page {
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    position: relative;
+}
+
+
+.page.active {
+    display: flex;
+
+    animation: fadeIn 1s ease;
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ---------------- TEXT ---------------- */
+
+h1 {
+    font-family: 'Pacifico', cursive;
+
+    color: #d65a91;
+
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+
+    margin: 15px 0;
+}
+
+
+h2 {
+    color: #a85b82;
+
+    margin: 15px 0;
+}
+
+
+p {
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+.small-text {
+    color: #b96d94;
+
+    font-size: 1rem;
+}
+
+
+/* ---------------- BUTTON ---------------- */
+
+button {
+
+    margin-top: 30px;
+
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #e889ae;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(214, 90, 145, 0.25);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+
+    transform: translateY(-4px) scale(1.03);
+
+    background: #d96b99;
+
+    box-shadow: 0 12px 25px rgba(214, 90, 145, 0.35);
+}
+
+
+/* ---------------- INTRO ---------------- */
+
+.intro,
+.birthday,
+.letter,
+.reasons,
+.gift-section,
+.final {
+
+    max-width: 850px;
+
+    width: 100%;
+
+    background: rgba(255,255,255,0.55);
+
+    padding: 50px 30px;
+
+    border-radius: 35px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 40px rgba(100,70,100,0.12);
+}
+
+
+/* ---------------- LETTER ---------------- */
+
+.envelope {
+
+    font-size: 70px;
+
+    animation: floating 2s infinite ease-in-out;
+}
+
+
+@keyframes floating {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+#typingText {
+
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    min-height: 150px;
+
+    font-size: 1.05rem;
+
+}
+
+
+/* ---------------- CARDS ---------------- */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    max-width: 600px;
+
+    margin: 30px auto;
+}
+
+
+.card {
+
+    height: 170px;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+}
+
+
+.card-front,
+.card-back {
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    padding: 20px;
+
+    backface-visibility: hidden;
+
+    position: absolute;
+
+    transition: transform 0.7s;
+
+    box-shadow: 0 8px 20px rgba(100,70,100,0.12);
+}
+
+
+.card-front {
+
+    background: #fff1f7;
+
+    font-size: 1.1rem;
+
+    color: #b85b85;
+}
+
+
+.card-back {
+
+    background: #eecce0;
+
+    transform: rotateY(180deg);
+
+    font-size: 0.9rem;
+
+}
+
+
+.card.flipped .card-front {
+
+    transform: rotateY(180deg);
+
+}
+
+
+.card.flipped .card-back {
+
+    transform: rotateY(360deg);
+
+}
+
+
+/* ---------------- GIFT ---------------- */
+
+.gift {
+
+    width: 150px;
+
+    height: 150px;
+
+    position: relative;
+
+    margin: 50px auto;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.gift:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+.gift-box {
+
+    position: absolute;
+
+    width: 120px;
+    height: 100px;
+
+    background: #e889ae;
+
+    bottom: 0;
+    left: 15px;
+
+    border-radius: 5px;
+}
+
+
+.gift-box::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 100%;
+
+    background: #f8d4e4;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+.gift-lid {
+
+    position: absolute;
+
+    width: 140px;
+    height: 30px;
+
+    background: #d96b99;
+
+    top: 20px;
+    left: 5px;
+
+    border-radius: 6px;
+
+    z-index: 2;
+
+    transition: 0.8s;
+}
+
+
+.gift.open .gift-lid {
+
+    transform: translateY(-80px) rotate(-10deg);
+
+}
+
+
+#giftText {
+
+    font-size: 1.2rem;
+
+    color: #d65a91;
+
+    font-weight: 500;
+}
+
+
+/* ---------------- FINAL ---------------- */
+
+.final-message {
+
+    margin: 25px auto;
+
+    max-width: 600px;
+
+}
+
+
+.sparkle {
+
+    font-size: 50px;
+
+    animation: sparkle 1.5s infinite alternate;
+}
+
+
+@keyframes sparkle {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.3) rotate(10deg);
+    }
+
+}
+
+
+/* ---------------- FLOATING HEARTS ---------------- */
+
+.hearts span {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    font-size: 20px;
+
+    animation: rise 7s linear infinite;
+
+    opacity: 0.6;
+
+    pointer-events: none;
+
+    z-index: 10;
+}
+
+
+@keyframes rise {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+    .intro,
+    .birthday,
+    .letter,
+    .reasons,
+    .gift-section,
+    .final {
+
+        padding: 35px 20px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .card {
+
+        height: 140px;
+
+    }
+
+
+    h1 {
+
+        font-size: 2.3rem;
+
+    }
+
+}
